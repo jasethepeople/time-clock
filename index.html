@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Time Clock — clock in, clock out, hours added up</title>
+<meta name="description" content="A browser time clock for small shops. Clock in and out by name, hours added up per person, JSON export. No account needed.">
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<a href="#clock">Skip to the time clock</a>
+<header>
+<h1>Time Clock</h1>
+<p>Clock in, clock out, hours add up. No account, no server, nothing leaves this browser.</p>
+</header>
+<main id="clock">
+<p>This page needs JavaScript to record punches and add up hours. Without it you can read this page, but nothing will save.</p>
+<section>
+<label for="worker-name">Name</label>
+<input type="text" id="worker-name">
+<button type="button" id="clock-in">Clock in</button>
+<button type="button" id="clock-out">Clock out</button>
+<p id="clock-result"></p>
+</section>
+<section>
+<h2>Currently clocked in</h2>
+<div id="clocked-in-list"><p>Nobody is clocked in right now.</p></div>
+</section>
+<section>
+<h2>Hours</h2>
+<div id="hours-list"><p>No hours yet.</p></div>
+</section>
+<section>
+<h2>Punch log</h2>
+<div id="punches-list"><p>No punches yet.</p></div>
+</section>
+<section>
+<h2>Pro: Payroll export</h2>
+<p id="pro-status"></p>
+<p>Pro is a $4.99 one-time unlock: payroll CSV export with overtime flagged, per person per day. The free clock stays free.</p>
+<a id="buy-pro" href="LEMON_SQUEEZY_BUY_LINK_HERE">Buy Pro — $4.99 one-time</a>
+<label for="license-key">License key</label>
+<input type="text" id="license-key">
+<button type="button" id="unlock-pro">Unlock Pro</button>
+<button type="button" id="export-payroll">Export payroll CSV</button>
+<p id="pro-result"></p>
+</section>
+<section>
+<button type="button" id="export-json">Export</button>
+<button type="button" id="clear-all">Clear all</button>
+</section>
+</main>
+<footer>
+<p>Punches live only in this browser unless you export them. <span id="year"></span></p>
+</footer>
+<script src="./app.js"></script>
+</body>
+</html>
